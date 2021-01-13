@@ -11,7 +11,44 @@
 
 </head>
 <body>
-    
-</body>
+    <!-- Food keyword search bar w/ button -->
+    <input type="text" class="drinkName"></input>
+    <button type="button" class="drinkNameButton">Search Food</button>
+    <!-- Drink keyword search bar w/ button -->
+    <input type="text" class="drinkName"></input>
+    <button type="button" class="drinkNameButton">Search Drink</button>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+  
+      // Food API get function
+      var foodKeyword = "tofu";
+      var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
+  
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        console.log(response.Runtime);
+      });
+  
+  
+      // Drink API get function
+      var drinkKeyword = "margarita";
+      var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
+  
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        console.log(response.Runtime);
+      });
+  
+  
+    </script>
+  
+  </body>
 <script src="./Assets/script.js"></script>
 </html>
