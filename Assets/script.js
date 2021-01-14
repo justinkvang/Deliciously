@@ -2,7 +2,7 @@
 
 // Food API get function
 var foodKeyword = "tofu";
-var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
+// var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
 
 $.ajax({
     url: queryURL,
@@ -35,6 +35,14 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     console.log(response);
-    console.log(response.Runtime);
+    for (let i = 0; i < response.drinks.length; i++) {
+        var recList = response.drinks[i];
+    //     // const ingredArr = []; I need to populate an array from here that can be defined in a variable
+    //     // let ingredArr = $(recList.recipe.ingredientLines);
+        console.log(recList.strIngredient1);
+    //     console.log(recList.recipe.label);
+    //     console.log(recList.recipe.ingredientLines);
+    //     console.log(recList.recipe.image);
+    }
 });
 
