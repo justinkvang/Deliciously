@@ -1,1 +1,20 @@
-/* write css code here */
+#cardCol {
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: deepskyblue
+}
+
+.cardImage {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.cardClass {
+    margin: 5px;
+    padding: 5px;
+}
