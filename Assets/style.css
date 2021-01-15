@@ -1,3 +1,31 @@
+
+#cardCol {
+    display: inline-block;
+}
+
+.container {
+    display: none; 
+/*  //use flex or none    */
+    justify-content: center;
+    background-color: deepskyblue
+}
+
+.cardImage {
+    object-fit: cover;
+
+    width: 150px;
+    height: 150px;
+
+    width: 300px;
+    height: 300px;
+
+}
+
+.cardClass {
+    margin: 5px;
+    padding: 5px;
+}
+
 body{
     background-image: url(https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
     background-position: center;
@@ -19,9 +47,9 @@ body{
 
 div.title-bar{
     background-color: white;
-    color: red;
+    color: rgb(51, 133, 51);
     padding: 5px;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
 }
 
@@ -30,6 +58,7 @@ ol.menu.horizontal {
     padding-left: 800px;
     font-size: 15px;
     margin-top: -40px;
+  
     
 }
 #search{
@@ -63,3 +92,4 @@ h1{
 
 
   
+
