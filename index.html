@@ -15,6 +15,27 @@
 
 <body>
 
+  <form id="recipeForm">
+  <!-- Food keyword search bar w/ button -->
+  <input type="text" id="RecipeName"></input>
+  <!-- Food button -->
+  <input id="recipeButton" type="button" value="click me">
+  </form>
+  <!-- Recipe information -->
+  <div id="recipeInfo"></div>
+
+
+  <!-- Drink keyword search bar w/ button -->
+  <!-- <input type="text" class="drinkName"></input>
+  <button type="button" class="drinkNameButton">Search Drink</button> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./Assets/script.js"></script>
+
+</body>
+
+
+
   <!-- Main page container for listing recipie cards -->
   <div class="container" id="containerID">
     <!-- Row zero listings -->
@@ -71,15 +92,6 @@
   </div>
 
   <div>
-    <!-- Food keyword search bar w/ button -->
-    <input type="text" class="drinkName"></input>
-    <button type="button" class="drinkNameButton">Search Food</button>
-    <!-- Drink keyword search bar w/ button -->
-    <input type="text" class="drinkName"></input>
-    <button type="button" class="drinkNameButton">Search Drink</button>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
   
       // Food API get function
       var foodKeyword = "tofu";
