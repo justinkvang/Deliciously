@@ -4,15 +4,24 @@
 }
 
 .container {
+
+    display: none;
+
     display: flex;
+
     justify-content: center;
     background-color: deepskyblue
 }
 
 .cardImage {
     object-fit: cover;
+
+    width: 150px;
+    height: 150px;
+
     width: 300px;
     height: 300px;
+
 }
 
 .cardClass {
