@@ -41,9 +41,9 @@ body{
 
 div.title-bar{
     background-color: white;
-    color: red;
+    color: rgb(51, 133, 51);
     padding: 5px;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
 }
 
@@ -52,6 +52,7 @@ ol.menu.horizontal {
     padding-left: 800px;
     font-size: 15px;
     margin-top: -40px;
+  
     
 }
 #search{
