@@ -7,7 +7,7 @@
     display: none; 
 /*  //use flex or none    */
     justify-content: center;
-    background-color: deepskyblue
+    background-color: deepskyblue;
 }
 
 .cardImage {
@@ -47,7 +47,8 @@ body{
 
 div.title-bar{
     background-color: white;
-    color: rgb(51, 133, 51);
+    color: red;
+    /* color: rgb(51, 133, 51); */
     padding: 5px;
     text-align: left;
     font-size: 30px;
@@ -55,9 +56,9 @@ div.title-bar{
 
 ol.menu.horizontal {
     float:right;
-    padding-left: 800px;
+    padding-left: 600px;
     font-size: 15px;
-    margin-top: -40px;
+    /* margin-top: -40px; */
   
     
 }
@@ -77,8 +78,9 @@ ol.menu.horizontal {
 
 }
 
-menu.a{
-    color: blueviolet;
+a{
+    color: red;
+    font-size: 15px;
 }
 h1{
     color: ivory;
