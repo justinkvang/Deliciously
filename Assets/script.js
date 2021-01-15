@@ -1,8 +1,13 @@
+// food recipe search function
+$("#recipeButton").on("click", function (event) {
+    event.preventDefault()
+    var foodKeyword = $("#RecipeName").val();
+var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
 //write js code here
 
 // Food API get function
-var foodKeyword = "tofu";
-var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
+// var foodKeyword = "tofu";
+// var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
 
 $.ajax({
     url: queryURL,
@@ -17,6 +22,7 @@ $.ajax({
         console.log(recList.recipe.label);
         console.log(recList.recipe.ingredientLines);
         console.log(recList.recipe.image);
+      // $("#recipeInfo").text(JSON.stringify(response)); --> to display items (currently only showing words)
     }
 
 });
@@ -35,6 +41,7 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     console.log(response);
-    console.log(response.Runtime);
+      console.log(response.Runtime);
 });
 
+});
