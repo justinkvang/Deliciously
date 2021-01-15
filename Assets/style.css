@@ -4,11 +4,7 @@
 }
 
 .container {
-
-    display: none;
-
-    display: flex;
-
+    display: none; //use flex or none
     justify-content: center;
     background-color: deepskyblue
 }
