@@ -14,6 +14,103 @@
 </head>
 
 <body>
+
+  <!-- Main page container for listing recipie cards -->
+  <div class="container" id="containerID">
+    <!-- Row zero listings -->
+    <div class="row" id="cardRow">
+      <!-- Card zero -->
+      <div class="col-4 cardClass" id="cardCol">
+        <div class="card cardZero">
+          <!-- Image container (top half of card) -->
+          <div class="cardImageContainer">
+            <a class="cardImageLink" href="https://www.w3schools.com">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20191011-creamy-tuscan-chicken-delish-ehg-2517-1571259200.jpg" class="cardImage" alt="cardZeroImage">
+            </a>
+          </div>
+          <!-- Description container (bottom half of card) -->
+          <div class="cardZeroDetailsContainer">
+            <a class="cardZeroTitleLink" href="https://www.w3schools.com">HEADER ZERO LINK TEXT</a>
+            <div class="cardZeroSummary">CARD ZERO DESCRIPTION TEXT</div>
+          </div>
+        </div>
+      </div>
+      <!-- Card one -->
+      <div class="col-4 cardClass" id="cardCol">
+        <div class="card cardOne">
+          <!-- Image container -->
+          <div class="cardImageContainer">
+            <a class="cardImageLink" href="https://www.w3schools.com">
+              <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/11/25/0/FNK_pan-seared-salmon-with-kale-apple-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1387918756116.jpeg" class="cardImage" alt="cardOneImage">
+            </a>
+          </div>
+          <!-- Description container -->
+          <div class="cardOneDetailsContainer">
+            <a class="cardOneTitleLink" href="https://www.w3schools.com">HEADER ONE LINK TEXT</a>
+            <div class="cardOneSummary">CARD ONE DESCRIPTION TEXT</div>
+          </div>
+        </div>
+      </div>
+      <!-- Card two -->
+      <div class="col-4 cardClass" id="cardCol">
+        <div class="card cardTwo">
+          <!-- Image container -->
+          <div class="cardImageContainer">
+            <a class="cardImageLink" href="https://www.w3schools.com">
+              <img src="https://www.diabetes.org/sites/default/files/styles/full_width/public/2019-04/Hero%20-%20Tips%20and%20Meal%20Planning_%20Meal%20Ideas%402x-min.jpg" class="cardImage" alt="cardTwoImage">
+            </a>
+          </div>
+          <!-- Description container -->
+          <div class="cardTwoDetailsContainer">
+            <a class="cardTwoTitleLink" href="https://www.w3schools.com">HEADER TWO LINK TEXT</a>
+            <div class="cardTwoSummary">CARD TWO DESCRIPTION TEXT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <!-- Food keyword search bar w/ button -->
+    <input type="text" class="drinkName"></input>
+    <button type="button" class="drinkNameButton">Search Food</button>
+    <!-- Drink keyword search bar w/ button -->
+    <input type="text" class="drinkName"></input>
+    <button type="button" class="drinkNameButton">Search Drink</button>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+  
+      // Food API get function
+      var foodKeyword = "tofu";
+      var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
+  
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        console.log(response.Runtime);
+      });
+  
+  
+      // Drink API get function
+      var drinkKeyword = "margarita";
+      var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
+  
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        console.log(response.Runtime);
+      });
+  
+  
+    </script>
+
+  </div>
+
     <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Deliciously  
@@ -50,6 +147,7 @@
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <script src="./Assets/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
