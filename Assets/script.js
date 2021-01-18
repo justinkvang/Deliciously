@@ -1,5 +1,5 @@
  // PRESS ENTER TO SEARCH TERM, NOT WORKING YET
-$(".searchTerm").keypress(function(event) {
+$("#searchTerm").keypress(function(event) {
     if (event.keyCode === 13) {
       event.preventDefault();
       $("#searchBtn").click();
@@ -8,7 +8,7 @@ $(".searchTerm").keypress(function(event) {
 
 // food recipe search function
 $("#searchBtn").on("click", function () {
-    var foodKeyword = $(".searchTerm").val();
+    var foodKeyword = $("#searchTerm").val();
 var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
 //write js code here
 
@@ -114,17 +114,17 @@ $.ajax({
         
     }
 )
-    };
+});
 
-    var deliciously = document.querySelector("#submitBtn1")
-    deliciously.addEventListener("click", function(){
+    // var deliciously = document.querySelector("#submitBtn1")
+    // deliciously.addEventListener("click", function(){
    
-    var description = document.querySelector("#container1")
-    description.style.display = "none"
+    // var description = document.querySelector("#container1")
+    // description.style.display = "none"
 
-    var questionChoice = document.querySelector('.container')
-        questionChoice.style.display = "block"
+    // var questionChoice = document.querySelector('.container')
+    //     questionChoice.style.display = "block"
 
 
     
-});
+// });
