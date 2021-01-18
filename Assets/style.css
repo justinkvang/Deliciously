@@ -1,13 +1,13 @@
 
-#cardCol {
+.cardClass {
     display: inline-block;
 }
 
 .container {
-    display: none; 
-/*  //use flex or none    */
+    /* type "display: none;" to make cards hidden || type "display: grid;" to make cards hidden */
+    display: none;
     justify-content: center;
-    background-color: deepskyblue
+    background-color: rgb(0, 38, 65)
 }
 
 .cardImage {
@@ -18,7 +18,6 @@
 
     width: 300px;
     height: 300px;
-
 }
 
 .cardClass {
@@ -30,7 +29,6 @@ body{
     background-image: url(https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
     background-position: center;
     background-size: cover;
-
 }
 
 
@@ -47,7 +45,8 @@ body{
 
 div.title-bar{
     background-color: white;
-    color: rgb(51, 133, 51);
+    color: red;
+    /* color: rgb(51, 133, 51); */
     padding: 5px;
     text-align: left;
     font-size: 30px;
@@ -55,12 +54,11 @@ div.title-bar{
 
 ol.menu.horizontal {
     float:right;
-    padding-left: 800px;
+    padding-left: 600px;
     font-size: 15px;
-    margin-top: -40px;
-  
-    
+    /* margin-top: -40px; */    
 }
+
 #search{
     display:flex;
     justify-content: center;
@@ -73,12 +71,15 @@ ol.menu.horizontal {
     margin-left: 250px;
     border-style: none;
     /* padding: 0; */
-
-
 }
 
-menu.a{
-    color: blueviolet;
+#searchBtn {
+    background-color: white;
+}
+
+a{
+    color: red;
+    font-size: 15px;
 }
 h1{
     color: ivory;
