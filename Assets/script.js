@@ -1,4 +1,5 @@
 // food recipe search function
+
 $("#recipeButton").on("click", function (event) {
     event.preventDefault()
     var foodKeyword = $("#RecipeName").val();
