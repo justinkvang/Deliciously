@@ -84,6 +84,17 @@ $.ajax({
 
             
         
-    }
+    };
+
+    var deliciously = document.querySelector("#submitBtn1")
+    deliciously.addEventListener("click", function(){
+   
+    var description = document.querySelector("#container1")
+    description.style.display = "none"
+
+    var questionChoice = document.querySelector('.container')
+        questionChoice.style.display = "block"
+
+
     
 });

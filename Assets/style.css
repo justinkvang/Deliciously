@@ -31,6 +31,12 @@
    
 }
 
+header{
+    
+    background-color:white;
+    
+}
+
 body{
     background-image: url(https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
     background-position: center;
@@ -51,10 +57,10 @@ body{
 #btn1{
     
     color: red;
-    /* color: rgb(51, 133, 51); */
     padding: 5px;
     text-align: left;
     font-size: 30px;
+    padding-left: 20px;
 }
 
 ol.menu.horizontal {
@@ -64,7 +70,7 @@ ol.menu.horizontal {
     /* margin-top: -40px; */    
 }
 
-#search{
+.example {
     display:flex;
     justify-content: center;
     margin: 15px;
@@ -89,11 +95,13 @@ a{
 h1{
     color: ivory;
     font-size: 50px;
+
     text-align: center;
     padding-top: 165px;
     font-weight: bolder;
     color: black
 }
+
 
 
 

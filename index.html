@@ -8,6 +8,7 @@
   <!-- Foundation css CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Our css file -->
   <link rel="stylesheet" href="./Assets/style.css">
 </head>
@@ -16,29 +17,37 @@
   <!-- Drink keyword search bar w/ button -->
   <!-- <input type="text" class="drinkName"></input>
   <button type="button" class="drinkNameButton">Search Drink</button> -->
-    <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
+    <!-- <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium"> -->
+        <!-- <button class="menu-icon" type="button" data-toggle></button> -->
+    
+      <header>
         <div class="title-bar-title"> <a id="btn1">Deliciously</a>  
             <ol class="menu horizontal">
                 <li><a href="#">Food Recipe</a></li>
                 <li><a href="#">Drink Recipe</a></li>
                 <li><a href="#"></a></li>
             </ol>      
-        </div>
-    </div>
-  </div>
-
+    </header>
+ <div id="container1">
     
   <div>
     <h1>Find a Recipe</h1>
     <div class="search">
         <div>
+            <form class="example" action="">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i id="submitBtn1" class="fa fa-search"></i></button>
+              </form>
+            <!-- <form action=""></form>
             <input id="search" class="searchTerm"
             type="search" placeholder="Search">
-            <button type="submit" id="searchBtn" value="Submit search">Search</button>
+            <button type="submit"><i id="searchBtn3" class="fa fa-search"></i></button>
+            <!-- <button type="submit" id="searchBtn" value="Submit search">Search</button> -->
+        <!-- </form> --> -->
         </div>
     </div>
   </div>
+ </div>
 
     <!-- Main page container for listing recipie cards -->
     <div class="container">
