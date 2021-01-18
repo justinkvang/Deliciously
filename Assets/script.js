@@ -58,33 +58,21 @@ $.ajax({
 
 });
 
-var drinkKeyword = "margarita";
-var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
+
+$("#searchBtn").on("click", function (event) {
+    event.preventDefault();
+    var recipeNu = $(".searchTerm").val();
+var queryURL = "https://api.edamam.com/api/nutrition-details&app_id=17f53caf&app_key=5f7c6577003274ea3648841df623a1ba";
 
 $.ajax({
     url: queryURL,
     method: "GET"
+    Content-Type: application/json
 }).then(function (response) {
-    // To use this api we need to create a function that digs through an 
-    // object within an array to pull ingredients and measurements without pulling the null values.
-    for (let i = 0; i < response.drinks.length; i++) {
-        var drinkNum = response.drinks[i];
-        console.log(drinkNum.strIngredient1);
-        console.log(drinkNum);
+    console.log(response);
+    for (let i = 0; i < response.hits.length; i++) {
+        var recList = response.hits[i];
+    }        
 
-
-        // for (let ind = 0; ind < $(drinkNum.length); ind++) {
-        //     var strIngredArr = drinkNum.strIngredient[ind];
-        //     console.log(strIngredArr);
-        //     console.log(drinkNum);
-        // }
-
-        }
-        for (let il = 0; il < 15; il++) {
-
-                if (drinkNum.strIngredient[il]) {
-            console.log(drinkNum.strIngredient[il]);
-        }    
-    }
-    
+});
 });
