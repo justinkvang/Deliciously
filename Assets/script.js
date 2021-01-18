@@ -46,13 +46,18 @@ $.ajax({
         console.log(drinkNum.strIngredient1);
         console.log(drinkNum);
 
-        
+
         // for (let ind = 0; ind < $(drinkNum.length); ind++) {
         //     var strIngredArr = drinkNum.strIngredient[ind];
         //     console.log(strIngredArr);
         //     console.log(drinkNum);
+        // }
 
-            
         }
+        for (let il = 0; il < 15; il++) {
+
+                if (drinkNum.strIngredient[il]) {
+            console.log(drinkNum.strIngredient[il]);
+        }    
     }
 });
