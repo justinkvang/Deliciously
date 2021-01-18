@@ -1,13 +1,16 @@
-// food recipe search function
-$("#recipeButton").on("click", function (event) {
-    event.preventDefault()
-    var foodKeyword = $("#RecipeName").val();
-var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
-//write js code here
+// PRESS ENTER TO SEARCH TERM, NOT WORKING YET
+// $(".searchTerm").keypress(function (event) {
+//     if (event.KeyCode === 13) {
+//       event.preventDefault();
+//       $("#searchBtn").click();  
+//     }
+// });
 
-// Food API get function
-// var foodKeyword = "tofu";
-// var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c"
+// food recipe search function
+$("#searchBtn").on("click", function (event) {
+    event.preventDefault();
+    var foodKeyword = $(".searchTerm").val();
+var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
 
 $.ajax({
     url: queryURL,
