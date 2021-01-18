@@ -1,4 +1,8 @@
 // food recipe search function
+
+$("#recipeButton").on("click", function (event) {
+    event.preventDefault()
+    var foodKeyword = $("#RecipeName").val();
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     var foodKeyword = $(".searchTerm").val();
@@ -86,6 +90,17 @@ $.ajax({
 
             
         
-    }
+    };
+
+    var deliciously = document.querySelector("#submitBtn1")
+    deliciously.addEventListener("click", function(){
+   
+    var description = document.querySelector("#container1")
+    description.style.display = "none"
+
+    var questionChoice = document.querySelector('.container')
+        questionChoice.style.display = "block"
+
+
     
 });
