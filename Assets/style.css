@@ -5,17 +5,13 @@
 
 .container {
     /* type "display: none;" to make cards hidden || type "display: grid;" to make cards hidden */
-    display: none;
+    display: grid;
     justify-content: center;
     background-color: rgb(0, 38, 65)
 }
 
 .cardImage {
     object-fit: cover;
-
-    width: 150px;
-    height: 150px;
-
     width: 300px;
     height: 300px;
 }
