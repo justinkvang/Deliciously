@@ -45,18 +45,24 @@ $(".searchBtnClass").on("click", function (event) {
 
             $(`#card${di}ImageID`).attr("src", response.drinks[di].strDrinkThumb);
             $(`#drinkCard${di}TitleID`).text(response.drinks[di].strDrink);
+            $(`#drinkCard${di}ModuleTitleID`).text(response.drinks[di].strDrink);
 
-            for (let i = 1; i < 16; i++) {
+            var ingredients = []
+                for (let i = 1; i < 16; i++) {
                 // var drinkIndex = response.drink[i];
-
+                    
                 if (response.drinks[di][`strIngredient${i}`] == null) {
                     break;
                 }
 
-                console.log(response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
+                ingredients[i] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
 
             }
+            $(`#ingredients${di}ID`).text(ingredients);
+            $(`#instructions${di}ID`).text(response.drinks[di].strInstructions);
+
         }
+        
         // To use this api we need to create a function that digs through an 
         // object within an array to pull ingredients and measurements without pulling the null values.
         // for (let i = 1; i < 16; i++) {
