@@ -89,17 +89,10 @@ $.ajax({
 
 // });
 
-<<<<<<< HEAD:Assets/script.js
-$(".searchBtnClass").on("click", function (event) {
-    event.preventDefault();
-var drinkKeyword = $(".searchTerm").val();
-var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
-=======
-// $("#searchBtn").on("click", function (event) {
+// $(".searchBtnClass").on("click", function (event) {
 //     event.preventDefault();
 // var drinkKeyword = $(".searchTerm").val();
 // var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
->>>>>>> d3af31f92b56ca6e9c4d9afb677bd14f4850f1fc:Assets/food.js
 
 // $.ajax({
 //     url: queryURL,
