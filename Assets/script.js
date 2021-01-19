@@ -73,25 +73,23 @@ $.ajax({
 
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
-var drinkKeyword = $(".searchTerm").val();
+var drinkKeyword = $("#searchTerm").val();
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
 
 $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function (response) {
-    console.log(response);
-    console.log(response.drinks[0]);
-    console.log(response.drinks[0].strDrink);
+    // console.log(response);
+    // console.log(response.drinks[0]);
+    var drinkTitle = response.drinks[0].strDrink;
+    console.log(drinkTitle);
 
     for (let i=1; i<16; i++){
-        console.log(i);
-
         if (response.drinks[0][`strIngredient${i}`] == null){
             break;
         }
-        let ingredient = document.createElement(`ons-list-item`);
-        ingredient.innerHTML = response.drinks[0][`strIngredient${i}`];
+        console.log(response.drinks[0][`strIngredient${i}`] +": " + response.drinks[0][`strMeasure${i}`]);
 
         
     }
