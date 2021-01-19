@@ -6,7 +6,7 @@ $("#searchTerm").keypress(function (event) {
     }
 });
 
-$("#searchBtn").on("click", function (event) {
+$(".searchBtnClass").on("click", function (event) {
     event.preventDefault();
     var drinkKeyword = $("#searchTerm").val();
 
