@@ -76,8 +76,8 @@ $.ajax({
             // console.log(recList.recipe.image);
             // $("#recipeInfo").text(JSON.stringify(response)); --> to display items (currently only showing words)
         // }
-
-    });
+    })
+});
 
     // Grabbing the info from the Food API
     // Psuedo code - I will pull the recipe 1names from the hits array, 
@@ -87,32 +87,39 @@ $.ajax({
     // Drink API get function
 
 
-});
+// });
 
+<<<<<<< HEAD:Assets/script.js
 $(".searchBtnClass").on("click", function (event) {
     event.preventDefault();
 var drinkKeyword = $(".searchTerm").val();
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
+=======
+// $("#searchBtn").on("click", function (event) {
+//     event.preventDefault();
+// var drinkKeyword = $(".searchTerm").val();
+// var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
+>>>>>>> d3af31f92b56ca6e9c4d9afb677bd14f4850f1fc:Assets/food.js
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function (response) {
-    console.log(response);
-    console.log(response.drinks[0]);
-    console.log(response.drinks[0].strDrink);
+// $.ajax({
+//     url: queryURL,
+//     method: "GET"
+// }).then(function (response) {
+//     console.log(response);
+//     console.log(response.drinks[0]);
+//     console.log(response.drinks[0].strDrink);
 
-    for (let i=1; i<16; i++){
-        console.log(i);
+//     for (let i=1; i<16; i++){
+//         console.log(i);
 
-        if (response.drinks[0][`strIngredient${i}`] == null){
-            break;
-        }
-        let ingredient = document.createElement(`ons-list-item`);
-        ingredient.innerHTML = response.drinks[0][`strIngredient${i}`];
+//         if (response.drinks[0][`strIngredient${i}`] == null){
+//             break;
+//         }
+//         let ingredient = document.createElement(`ons-list-item`);
+//         ingredient.innerHTML = response.drinks[0][`strIngredient${i}`];
 
         
-    }
+//     }
     // To use this api we need to create a function that digs through an 
     // object within an array to pull ingredients and measurements without pulling the null values.
     // for (let i = 1; i < 16; i++) {
@@ -130,9 +137,9 @@ $.ajax({
 
             
         
-    }
-)
-});
+//     }
+// )
+// });
 
     // var deliciously = document.querySelector("#submitBtn1")
     // deliciously.addEventListener("click", function(){
