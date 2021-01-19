@@ -21,30 +21,35 @@
         <!-- <button class="menu-icon" type="button" data-toggle></button> -->
     
       <header>
-        <div class="title-bar-title"> <a id="btn1">Deliciously</a>  
+        <nav class="title-bar-title"> 
+          <a href="./index.html" id="btn1">Deliciously</a>  
+          <form id="navSearch" class="example" action="">
+            <!-- will insert here the input box after clicking button -->
+            <button id="searchBtn2" class="searchBtnClass" type="button"><i id="searchBtn4" class="fa fa-search"></i></button>
+        </form>
             <ol class="menu horizontal">
                 <li><a href="#">Food Recipe</a></li>
                 <li><a href="#">Drink Recipe</a></li>
                 <li><a href="#"></a></li>
-            </ol>      
+            </ol> 
+        </nav>       
     </header>
  <div id="container1">
     
   <div>
     <h1>Find a Recipe</h1>
     <div class="search">
-        <div>
-            <form class="example" action="">
+        <!-- <div> -->
+            <!-- <form class="example" action="">
                 <input type="text" placeholder="Search.." name="search" id="searchTerm"> 
                 <button type="submit"><i id="searchBtn" class="fa fa-search"></i></button>
-              </form>
-            <!-- <form action=""></form>
-            <input id="search" class="searchTerm"
-            type="search" placeholder="Search">
-            <button type="submit"><i id="searchBtn3" class="fa fa-search"></i></button>
-            <!-- <button type="submit" id="searchBtn" value="Submit search">Search</button> -->
-        <!-- </form> --> -->
-        </div>
+              </form> -->
+            <form class="example" action="">
+                <input id="searchTerm" class="searchTerm"
+                type="search" placeholder="Search">
+                <button id="searchBtn" class="searchBtnClass" type="button"><i id="searchBtn3" class="fa fa-search"></i></button>
+            </form>
+        <!-- </div> -->
     </div>
   </div>
  </div>
