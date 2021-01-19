@@ -39,9 +39,13 @@ $(".searchBtnClass").on("click", function (event) {
         // console.log(drinkTitle);
         // console.log(mixInstructions);
         for (let di = 0; di < 10; di++) {
-// console.log(di);
-console.log(response.drinks[di].strImageSource);
-console.log(response.drinks[di].strDrink);
+            // console.log(di);
+            console.log(response.drinks[di].strImageSource);
+            console.log(response.drinks[di].strDrink);
+
+            $(`#card${di}ImageID`).attr("src", response.drinks[di].strDrinkThumb);
+            $(`#drinkCard${di}TitleID`).text(response.drinks[di].strDrink);
+
             for (let i = 1; i < 16; i++) {
                 // var drinkIndex = response.drink[i];
 
