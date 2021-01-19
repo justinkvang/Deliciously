@@ -18,24 +18,26 @@ Repo:
 ## Screenshots
 
 ## Tools and APIs Utilized
-HTML, CSS, JavaScript
-Foundation CSS -> https://get.foundation/index.html
-Edamam API -> https://developer.edamam.com/
-TheCocktailDB API -> https://www.thecocktaildb.com/
-jQuery CDN -> https://code.jquery.com/
-font-awesome CDN -> https://cdnjs.com/libraries/font-awesome
+- HTML
+- CSS
+- JavaScript
+- [Foundation](https://get.foundation/index.html)
+- [Edamam API](https://developer.edamam.com/)
+- [TheCocktailDB API](https://www.thecocktaildb.com/)
+- [jQuery CDN](https://code.jquery.com/)
+- [font-awesome CDN](https://cdnjs.com/libraries/font-awesome)
 
 ## Credit
 ### Hungry Team Members
-Chaltu Abdulkadir
-Carson Scholberg
-Jacob Doty
-Justin Vang 
+- [Chaltu Abdulkadir](https://github.com/cmabdulkadir?tab=repositories)
+- [Carson Scholberg](https://github.com/CarsonScholberg)
+- [Jacob Doty](https://github.com/jacobdoty-20)
+- [Justin Vang](https://github.com/justinkvang) 
 
 ### Background Images
-Photos found through Unsplash -> https://unsplash.com/
+Photos found through [Unsplash](https://unsplash.com/)
 Drink Background -> Credit: Proriat Hospitality Partners & Proriat HoReCa Real Estate Support and Share: Facebook @proriathospitality
 Food Background -> need source from Chaltu
 
 ### Inspiration
-Epicurious - https://www.epicurious.com/
+[Epicurious](https://www.epicurious.com/)
