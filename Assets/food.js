@@ -7,8 +7,26 @@ $("#searchTerm").keypress(function(event) {
 });
 
 // food recipe search function
-$("#searchBtn").on("click", function () {
-    var foodKeyword = $("#searchTerm").val();
+$(".searchBtnClass").on("click", function () {
+var foodKeyword = $("#searchTerm").val();
+
+$("#container1").hide();
+$('#searchTerm').remove();
+
+// <input id="searchTerm" class="searchTerm" type="search" placeholder="Search">
+
+var newSearchBox = $('<input>');
+newSearchBox.attr('id', 'searchTerm');
+newSearchBox.attr('class', 'searchTerm');
+newSearchBox.attr('type', 'search');
+newSearchBox.attr('placeholder', 'Search');
+newSearchBox.css('height', '2.5rem')
+
+$("#navSearch").prepend(newSearchBox);
+
+$("#navSearch").css("display","flex")
+$(".container").css("display","grid")
+
 var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
 //write js code here
 
@@ -71,7 +89,7 @@ $.ajax({
 
 // });
 
-// $("#searchBtn").on("click", function (event) {
+// $(".searchBtnClass").on("click", function (event) {
 //     event.preventDefault();
 // var drinkKeyword = $(".searchTerm").val();
 // var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkKeyword;
