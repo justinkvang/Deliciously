@@ -32,20 +32,25 @@ $("#searchBtn").on("click", function (event) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+        var drinkTitle = response.drinks[0].strDrink;
+        var mixInstructions = response.drinks[0].strInstructions;
         console.log(response);
-        console.log(response.drinks[0]);
-        console.log(response.drinks[0].strDrink);
+        // console.log(drinkTitle);
+        // console.log(mixInstructions);
+        for (let di = 0; di < 10; di++) {
+// console.log(di);
+console.log(response.drinks[di].strImageSource);
+console.log(response.drinks[di].strDrink);
+            for (let i = 1; i < 16; i++) {
+                // var drinkIndex = response.drink[i];
 
-        for (let i = 1; i < 16; i++) {
-            console.log(i);
+                if (response.drinks[di][`strIngredient${i}`] == null) {
+                    break;
+                }
 
-            if (response.drinks[0][`strIngredient${i}`] == null) {
-                break;
+                console.log(response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
+
             }
-            let ingredient = document.createElement(`ons-list-item`);
-            ingredient.innerHTML = response.drinks[0][`strIngredient${i}`];
-
-
         }
         // To use this api we need to create a function that digs through an 
         // object within an array to pull ingredients and measurements without pulling the null values.
