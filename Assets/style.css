@@ -1,14 +1,20 @@
 
 .cardClass {
     display: inline-block;
+    margin: 5px;
+    padding: 5px; 
     
 }
-
+.card{
+    border-radius: 8px;
+}
 .container {
     /* type "display: none;" to make cards hidden || type "display: grid;" to make cards hidden */
     display: none;
     justify-content: center;
     background-color: rgb(0, 38, 65);
+    margin-bottom: 30px;
+
 
 }
 
@@ -20,11 +26,11 @@
 
 }
 
+#navSearch{
+    display: none;
+    width: 30%;
+    margin-top: 7px;
 
-.cardClass {
-    margin: 5px;
-    padding: 5px;
-   
 }
 
 header{
@@ -38,6 +44,9 @@ header{
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    /* min-width: 100%;
+    min-height: 100%; */
 }
 
 #drinkBackground{
@@ -57,6 +66,16 @@ header{
     text-align: center;
     padding:10px ;
 }
+
+ .title-bar-title {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .menu {
+     margin-top: 10px;
+ }
+
 #btn1{
     
     color: red;
@@ -66,29 +85,40 @@ header{
     padding-left: 20px;
 }
 
-ol.menu.horizontal {
+/* ol.menu.horizontal {
     float:right;
     padding-left: 600px;
     font-size: 15px;
-    /* margin-top: -40px; */    
-}
+    /* margin-top: -40px; 
+} */
 
 .example {
     display:flex;
     justify-content: center;
-    margin: 15px;
+    margin: 0px;
     /* padding-top: 60px; */
     background-color: rgba(255,255,255,0.75);
-    background-position: 14px 50%;
-    height: 3.75rem;
-    width: 60%;
-    margin-left: 250px;
+    /* background-position: 14px 50%; */
+    /* height: 3.75rem; */
+    width: 50%;
+    /* margin-left: 250px; */
     border-style: none;
     /* padding: 0; */
+    /* clear: both; */
 }
 
-#searchBtn {
-    background-color: white;
+
+#searchBtn{
+    width: 15%;
+}
+
+#searchBtn2{    
+    /* border: solid 2px black; */
+    width: 15%;
+    margin-bottom: 8px;
+    background-color:dimgrey;
+    opacity: 30%;
+
 }
 
 a{
@@ -102,9 +132,28 @@ h1{
     text-align: center;
     padding-top: 165px;
     font-weight: bolder;
-    color: black
+    color: red;
+
+    
+        color: ivory;
+        -webkit-text-stroke: 1px ivory;
+        -webkit-text-fill-color: black;
+    
 }
 
+#searchTerm{
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 50%;
+    height: 3.75rem;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
 
