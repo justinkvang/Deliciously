@@ -1,3 +1,4 @@
+$(document).foundation();
 // PRESS ENTER TO SEARCH TERM, NOT WORKING YET
 $("#searchTerm").keypress(function (event) {
     if (event.keyCode === 13) {
