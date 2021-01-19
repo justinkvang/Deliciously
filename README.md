@@ -18,15 +18,12 @@ Repo:
 ## Screenshots
 
 ## Tools and APIs Utilized
-HTML
-CSS
-JavaScript
-Edamam API
-TheCocktailDB API
-
-### API References 
-Edamam (Recipe search API) -> https://developer.edamam.com/
-TheCocktailDB (Cocktail search API) -> https://www.thecocktaildb.com/
+HTML, CSS, JavaScript
+Foundation CSS -> https://get.foundation/index.html
+Edamam API -> https://developer.edamam.com/
+TheCocktailDB API -> https://www.thecocktaildb.com/
+jQuery CDN -> https://code.jquery.com/
+font-awesome CDN -> https://cdnjs.com/libraries/font-awesome
 
 ## Credit
 ### Hungry Team Members
