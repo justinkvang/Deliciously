@@ -50,11 +50,11 @@ $(".searchBtnClass").on("click", function (event) {
                 for (let i = 1; i < 16; i++) {
                 // var drinkIndex = response.drink[i];
                     
-                if (response.drinks[di][`strIngredient${i}`] == null) {
+                if (response.drinks[di][`strIngredient${i}`] === null) {
                     break;
                 }
 
-                ingredients[i] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
+                ingredients[i-1] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
 
             }
             $(`#drinkCard${di}ModalTitleID`).text(response.drinks[di].strDrink);
