@@ -1,3 +1,4 @@
+$(document).foundation();
 // PRESS ENTER TO SEARCH TERM, NOT WORKING YET
 $("#searchTerm").keypress(function (event) {
     if (event.keyCode === 13) {
@@ -45,17 +46,34 @@ $(".searchBtnClass").on("click", function (event) {
             $(`#card${di}ImageID`).attr("src", response.drinks[di].strDrinkThumb);
             $(`#drinkCard${di}TitleID`).text(response.drinks[di].strDrink);
 
-            for (let i = 1; i < 16; i++) {
+            var ingredients = []
+                for (let i = 1; i < 16; i++) {
                 // var drinkIndex = response.drink[i];
-
-                if (response.drinks[di][`strIngredient${i}`] == null) {
+                    
+                if (response.drinks[di][`strIngredient${i}`] === null) {
                     break;
                 }
 
-                console.log(response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
+                ingredients[i-1] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
 
             }
+            $(`#drinkCard${di}ModalTitleID`).text(response.drinks[di].strDrink);
+            // creating list for ingredients
+            let myList = document.querySelector(`#ingredients${di}ID`);
+            ingredients.forEach(function(value) {
+              let li = document.createElement('li');
+              let a = document.createElement('p');
+              a.classList.add('ui-all');
+              a.tabIndex = -1;
+              a.innerText = value; 
+              li.appendChild(a);
+              myList.appendChild(li);
+            });
+
+            $(`#instructions${di}ID`).text(response.drinks[di].strInstructions);
+
         }
+        
         // To use this api we need to create a function that digs through an 
         // object within an array to pull ingredients and measurements without pulling the null values.
         // for (let i = 1; i < 16; i++) {
