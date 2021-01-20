@@ -1,5 +1,7 @@
+// Foundation 
 $(document).foundation();
-// PRESS ENTER TO SEARCH TERM, NOT WORKING YET
+
+// Press keyboard enter Main page search bar
 $("#searchTerm").keypress(function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
@@ -7,6 +9,15 @@ $("#searchTerm").keypress(function (event) {
     }
 });
 
+// Press keyboard enter cards page
+$("#navSearch").keypress(function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#searchBtn2").click();
+    }
+});
+
+// on click function for search bars
 $(".searchBtnClass").on("click", function (event) {
     event.preventDefault();
     var drinkKeyword = $("#searchTerm").val();
@@ -35,25 +46,19 @@ $(".searchBtnClass").on("click", function (event) {
     }).then(function (response) {
         var drinkTitle = response.drinks[0].strDrink;
         var mixInstructions = response.drinks[0].strInstructions;
-        console.log(response);
-        // console.log(drinkTitle);
-        // console.log(mixInstructions);
+
         for (let di = 0; di < 10; di++) {
-            // console.log(di);
-            console.log(response.drinks[di].strImageSource);
-            console.log(response.drinks[di].strDrink);
 
             $(`#card${di}ImageID`).attr("src", response.drinks[di].strDrinkThumb);
             $(`#drinkCard${di}TitleID`).text(response.drinks[di].strDrink);
 
             var ingredients = []
                 for (let i = 1; i < 16; i++) {
-                // var drinkIndex = response.drink[i];
                     
                 if (response.drinks[di][`strIngredient${i}`] === null) {
                     break;
                 }
-
+                // pulling ingredients and measurements 
                 ingredients[i-1] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
 
             }
@@ -69,41 +74,10 @@ $(".searchBtnClass").on("click", function (event) {
               li.appendChild(a);
               myList.appendChild(li);
             });
-
             $(`#instructions${di}ID`).text(response.drinks[di].strInstructions);
 
         }
-        
-        // To use this api we need to create a function that digs through an 
-        // object within an array to pull ingredients and measurements without pulling the null values.
-        // for (let i = 1; i < 16; i++) {
-        //     if(response.drinks[0][`strIngredient${i}`]== null){
-        //         break;
-        //     }
-        //     console.log(drinkNum.strIngredient1);
-        //     console.log(drinkNum);
-
-
-        // for (let ind = 0; ind < $(drinkNum.length); ind++) {
-        //     var strIngredArr = drinkNum.strIngredient[ind];
-        //     console.log(strIngredArr);
-        //     console.log(drinkNum);
-
-
-
     }
     )
 });
 
-    // var deliciously = document.querySelector("#submitBtn1")
-    // deliciously.addEventListener("click", function(){
-
-    // var description = document.querySelector("#container1")
-    // description.style.display = "none"
-
-    // var questionChoice = document.querySelector('.container')
-    //     questionChoice.style.display = "block"
-
-
-
-// });
