@@ -45,7 +45,6 @@ $(".searchBtnClass").on("click", function (event) {
 
             $(`#card${di}ImageID`).attr("src", response.drinks[di].strDrinkThumb);
             $(`#drinkCard${di}TitleID`).text(response.drinks[di].strDrink);
-            $(`#drinkCard${di}ModuleTitleID`).text(response.drinks[di].strDrink);
 
             var ingredients = []
                 for (let i = 1; i < 16; i++) {
@@ -58,6 +57,7 @@ $(".searchBtnClass").on("click", function (event) {
                 ingredients[i] = (response.drinks[di][`strIngredient${i}`] + ": " + response.drinks[di][`strMeasure${i}`]);
 
             }
+            $(`#drinkCard${di}ModalTitleID`).text(response.drinks[di].strDrink);
             $(`#ingredients${di}ID`).text(ingredients);
             $(`#instructions${di}ID`).text(response.drinks[di].strInstructions);
 
