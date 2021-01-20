@@ -31,7 +31,7 @@ $(".searchBtnClass").on("click", function () {
     $("#navSearch").prepend(newSearchBox);
 
     $("#navSearch").css("display", "flex")
-    $(".container").css("display", "grid")
+    $(".container2").css("display", "grid")
 
     var queryURL = "https://api.edamam.com/search?q=" + foodKeyword + "&app_id=254ee167&app_key=2753a296392ca0118d13115188aa926c";
 
