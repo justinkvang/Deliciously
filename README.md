@@ -1,4 +1,4 @@
-**Deliciously**
+# Deliciously
 Deliciously is a website designed to search for food and cocktail recipes using simple key words. 
 
 ## How to Use
