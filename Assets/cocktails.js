@@ -58,7 +58,18 @@ $(".searchBtnClass").on("click", function (event) {
 
             }
             $(`#drinkCard${di}ModalTitleID`).text(response.drinks[di].strDrink);
-            $(`#ingredients${di}ID`).text(ingredients);
+            // creating list for ingredients
+            let myList = document.querySelector(`#ingredients${di}ID`);
+            ingredients.forEach(function(value) {
+              let li = document.createElement('li');
+              let a = document.createElement('p');
+              a.classList.add('ui-all');
+              a.tabIndex = -1;
+              a.innerText = value; 
+              li.appendChild(a);
+              myList.appendChild(li);
+            });
+
             $(`#instructions${di}ID`).text(response.drinks[di].strInstructions);
 
         }
