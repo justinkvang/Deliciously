@@ -56,6 +56,7 @@ $(".searchBtnClass").on("click", function () {
             $(`#card${i}ImageID`).attr("src", response.hits[i].recipe.image);
             $(`#card${i}TitleLinkID`).text(response.hits[i].recipe.label);
             $(`#card${i}SourceID`).text("Source: " + response.hits[i].recipe.source);
+            $(`#card${i}TitleLinkID`).attr("href", response.hits[i].recipe.url);
         }
 
 
