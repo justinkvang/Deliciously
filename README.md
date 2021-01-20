@@ -12,8 +12,8 @@ If you would like to search for cocktail recipes...
     3. Choose what cocktail appeals to you and ........
 
 ## Links
-Deployed website:
-Repo:
+[Deployed website](https://justinkvang.github.io/Deliciously/)
+[Repo](https://github.com/justinkvang/Deliciously)
 
 ## Screenshots
 

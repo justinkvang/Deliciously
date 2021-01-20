@@ -3,12 +3,10 @@
   margin: 5px;
   padding: 5px;
 }
-
 .card {
   border-radius: 8px;
   border: none;
 }
-
 .container {
   display: none;
   justify-content: center;
