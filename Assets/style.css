@@ -3,10 +3,12 @@
   margin: 5px;
   padding: 5px;
 }
+
 .card {
   border-radius: 8px;
   border: none;
 }
+
 .container {
   display: none;
   justify-content: center;
@@ -132,4 +134,8 @@ h1 {
   display: flex;
   justify-content: center;
   margin-left: 60px;
+}
+
+.cardDetailsContainer {
+  max-width: 300px;
 }
